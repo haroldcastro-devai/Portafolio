@@ -477,8 +477,8 @@ dd {
 
 .foto {
   flex: none;
-  width: 125px;
-  height: 125px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px dashed rgba(61, 213, 243, .6);
   background: rgba(61, 213, 243, .06);
