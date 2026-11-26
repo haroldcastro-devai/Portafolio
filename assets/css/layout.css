@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Layout: cabecera, hero, cifras, contacto y pie
+   ========================================================================== */
+
+/* Cabecera y navegación */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(7, 16, 31, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+header .w {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 60px;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: .92rem;
+}
+
+nav a {
+  position: relative;
+  padding: 4px 0;
+  text-decoration: none;
+  color: var(--mut);
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+nav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: var(--sig);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s;
+}
+
+nav a:hover:after,
+nav a.on:after {
+  transform: scaleX(1);
+}
+
+nav a.on {
+  color: var(--text);
+}
+
+/* Hero */
+.hero {
+  padding: 84px 0 64px;
+  background: radial-gradient(900px 420px at 85% 10%, rgba(61, 213, 243, .13), transparent 70%);
+}
+
+.hero .w {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  margin-bottom: 18px;
+}
+
+.hero p {
+  color: var(--mut);
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Cifras destacadas */
+.facts {
+  border-block: 1px solid var(--line);
+  background: var(--deep);
+}
+
+.facts .w {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-block: 28px;
+}
+
+.facts strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--sig);
+}
+
+.facts strong b {
+  font: inherit;
+}
+
+.facts span {
+  font-size: .87rem;
+  color: var(--mut);
+}
+
+/* Contacto y pie */
+#contacto {
+  background: var(--deep);
+  border-top: 1px solid var(--line);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+footer {
+  padding: 28px 0;
+  color: var(--mut);
+  font-size: .86rem;
+  border-top: 1px solid var(--line);
+}
