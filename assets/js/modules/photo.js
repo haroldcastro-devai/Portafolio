@@ -12,8 +12,8 @@
     var image = document.createElement('img');
     image.src = src;
     image.alt = 'Foto de Harold Castro';
-    image.width = 104;
-    image.height = 104;
+    image.width = 125;
+    image.height = 125;
 
     holder.innerHTML = '';
     holder.className = 'foto ok';
