@@ -227,6 +227,35 @@
   color: var(--sig);
 }
 
+.otros {
+  margin-top: 12px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.otros > p {
+  color: var(--mut);
+}
+
+.otros ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 32px;
+  margin-top: 16px;
+}
+
+.otros li {
+  color: var(--mut);
+}
+
+.otros li strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
 .flow {
   display: flex;
   flex-wrap: wrap;

@@ -22,6 +22,10 @@
     grid-column: 1 / -1;
   }
 
+  .otros ul {
+    grid-template-columns: 1fr;
+  }
+
   .svc {
     grid-template-columns: 1fr;
   }
