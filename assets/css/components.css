@@ -50,19 +50,12 @@
   box-shadow: 0 0 0 4px rgba(74, 222, 128, .15);
 }
 
-/* Panel de onda de voz */
+/* Panel del hero */
 .rig {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: linear-gradient(180deg, var(--deep), #0a1527);
   padding: 22px;
-}
-
-.rig small {
-  display: block;
-  margin-top: 14px;
-  color: var(--mut);
-  font-size: .8rem;
 }
 
 .wave {
@@ -89,38 +82,118 @@
   }
 }
 
-.chain {
+/* Panel de proceso */
+.proc {
+  padding: 26px;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin-top: 20px;
-  font-size: .8rem;
-  text-align: center;
+  gap: 22px;
 }
 
-.chain b {
-  font-weight: 500;
-  padding: 8px 4px;
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  bottom: 22px;
+  width: 1px;
+  background: var(--line);
+}
+
+.steps li {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.steps .dot {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  background: var(--deep);
   color: var(--mut);
-  animation: lit 6s infinite;
-  animation-delay: calc(var(--n) * 1.3s);
+  display: grid;
+  place-items: center;
+  animation: lit2 8s infinite;
+  animation-delay: calc(var(--n) * 1.5s);
 }
 
-@keyframes lit {
+.ic2 {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.steps b {
+  display: block;
+  font-weight: 600;
+}
+
+.steps small {
+  display: block;
+  color: var(--mut);
+  font-size: .86rem;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.hero .prod {
+  color: var(--text);
+  font-size: .92rem;
+  margin-bottom: 0;
+}
+
+.prod {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-weight: 600;
+  font-size: .92rem;
+}
+
+.prod span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, .15);
+  animation: pulse 2s infinite;
+}
+
+@keyframes lit2 {
   0%,
-  22% {
+  16% {
     color: var(--sig);
     border-color: var(--sig);
-    background: rgba(61, 213, 243, .09);
+    background: rgba(61, 213, 243, .12);
   }
 
-  30%,
+  24%,
   100% {
     color: var(--mut);
     border-color: var(--line);
-    background: none;
+    background: var(--deep);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 7px rgba(74, 222, 128, 0);
   }
 }
 

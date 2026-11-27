@@ -51,6 +51,11 @@
     opacity: 1;
   }
 
+  .steps .dot {
+    color: var(--sig);
+    border-color: rgba(61, 213, 243, .5);
+  }
+
   .wave span {
     height: calc(20% + var(--h) * 50%);
   }
