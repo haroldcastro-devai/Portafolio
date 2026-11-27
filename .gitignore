@@ -6,3 +6,6 @@ Desktop.ini
 # Entorno
 node_modules/
 *.log
+
+# Borrador local (no versionar)
+portafolio-harold-castro-v2.html
