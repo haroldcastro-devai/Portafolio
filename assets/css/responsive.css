@@ -17,6 +17,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Con un número impar de datos, el último ocupa la fila completa */
+  .facts .w > div:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
   .svc {
     grid-template-columns: 1fr;
   }
