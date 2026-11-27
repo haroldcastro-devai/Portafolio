@@ -43,7 +43,7 @@
       return;
     }
 
-    App.observeOnce(blocks, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' }, function (element) {
+    App.observeOnce(blocks, { threshold: 0.14, rootMargin: '0px 0px -7% 0px' }, function (element) {
       element.classList.add('in');
     });
   };

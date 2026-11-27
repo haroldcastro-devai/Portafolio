@@ -12,6 +12,8 @@
   --ok: #4ade80;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --reveal-dur: .8s;
+  --reveal-ease: cubic-bezier(.25, .8, .25, 1);
 }
 
 * {
@@ -93,8 +95,8 @@ section {
 /* Aparición al hacer scroll (fade + ligero desplazamiento) */
 .js .reveal {
   opacity: 0;
-  transform: translateY(1.25rem);
-  transition: opacity .55s ease, transform .55s ease;
+  transform: translateY(1.35rem);
+  transition: opacity var(--reveal-dur) var(--reveal-ease), transform var(--reveal-dur) var(--reveal-ease);
 }
 
 .js .reveal.in {
