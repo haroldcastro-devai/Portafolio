@@ -1,26 +1,50 @@
-/* Animaciones de entrada de los casos y de los pasos del flujo. */
+/* Aparición al scroll y animación de los pasos del flujo en proyectos. */
 (function (App) {
   'use strict';
 
+  var REVEAL_SELECTORS = [
+    '.hero .w > div',
+    '.facts .w > div',
+    'main section .w > h2',
+    'main section .w > .lead',
+    'main section .w > dl',
+    '.case',
+    '.otros',
+    '.svc > div',
+    '.tl article',
+    '.edu',
+    '#contacto .links',
+    'footer .w'
+  ];
+
   App.initReveal = function () {
-    /* Asigna un retraso progresivo a cada paso del flujo. */
     App.select('.flow').forEach(function (flow) {
       App.select('b', flow).forEach(function (step, index) {
         step.style.setProperty('--k', index);
       });
     });
 
-    var cases = App.select('.case');
+    var blocks = [];
+
+    REVEAL_SELECTORS.forEach(function (selector) {
+      App.select(selector).forEach(function (element) {
+        if (blocks.indexOf(element) !== -1) return;
+        element.classList.add('reveal');
+        blocks.push(element);
+      });
+    });
+
+    if (!blocks.length) return;
 
     if (App.reduceMotion) {
-      cases.forEach(function (item) {
-        item.classList.add('in');
+      blocks.forEach(function (element) {
+        element.classList.add('in');
       });
       return;
     }
 
-    App.observeOnce(cases, { threshold: 0.3 }, function (item) {
-      item.classList.add('in');
+    App.observeOnce(blocks, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' }, function (element) {
+      element.classList.add('in');
     });
   };
 })(window.Portfolio);

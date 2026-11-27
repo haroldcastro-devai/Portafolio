@@ -89,3 +89,15 @@ section {
   background: var(--deep);
   border-block: 1px solid var(--line);
 }
+
+/* Aparición al hacer scroll (fade + ligero desplazamiento) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity .55s ease, transform .55s ease;
+}
+
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}

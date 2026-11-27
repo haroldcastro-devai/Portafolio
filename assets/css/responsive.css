@@ -51,6 +51,11 @@
     scroll-behavior: auto !important;
   }
 
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
   .js .case .flow b {
     opacity: 1;
   }
