@@ -122,6 +122,13 @@ nav a.on {
   font: inherit;
 }
 
+.facts strong .plus {
+  color: inherit;
+  font-size: .62em;
+  vertical-align: super;
+  margin-left: .1em;
+}
+
 .facts span {
   font-size: .87rem;
   color: var(--mut);

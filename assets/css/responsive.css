@@ -17,6 +17,15 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Con un número impar de datos, el último ocupa la fila completa */
+  .facts .w > div:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .otros ul {
+    grid-template-columns: 1fr;
+  }
+
   .svc {
     grid-template-columns: 1fr;
   }
@@ -44,6 +53,11 @@
 
   .js .case .flow b {
     opacity: 1;
+  }
+
+  .steps .dot {
+    color: var(--sig);
+    border-color: rgba(61, 213, 243, .5);
   }
 
   .wave span {
