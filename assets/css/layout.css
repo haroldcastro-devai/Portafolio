@@ -175,24 +175,27 @@ nav a.on {
   transition: color .2s, border-color .2s, transform .2s, background .2s;
 }
 
-.social-link svg,
-.social-mark {
+.social-link svg {
   width: 22px;
   height: 22px;
 }
 
-/* Isologo oficial: una sola tinta como LinkedIn/GitHub */
-.social-mark--workana {
+.social-img--workana {
+  width: 26px;
+  height: 26px;
   display: block;
-  background-color: currentColor;
-  -webkit-mask-image: url("../img/workana.png");
-  mask-image: url("../img/workana.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  object-fit: contain;
+  border-radius: 50%;
+  /* Misma escala de gris que los iconos mut; el círculo del isologo se lee como el resto */
+  filter: grayscale(1) brightness(1.12) contrast(1.05);
+  opacity: 0.88;
+  transition: opacity .2s, filter .2s;
+}
+
+.social-link--workana:hover .social-img--workana,
+.social-link--workana:focus-visible .social-img--workana {
+  opacity: 1;
+  filter: grayscale(1) brightness(1.35) contrast(1.05);
 }
 
 .social-link:hover {
