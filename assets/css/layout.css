@@ -143,8 +143,52 @@ nav a.on {
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  gap: 16px 20px;
   margin-top: 26px;
+}
+
+.btn .btn-ic {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: -4px;
+  stroke: var(--ink);
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--mut);
+  text-decoration: none;
+  background: transparent;
+  transition: color .2s, border-color .2s, transform .2s, background .2s;
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+}
+
+.social-link:hover {
+  color: var(--sig);
+  border-color: var(--sig);
+  transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+  color: var(--sig);
+  border-color: var(--sig);
 }
 
 footer {
