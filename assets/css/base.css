@@ -12,7 +12,7 @@
   --ok: #4ade80;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
-  --reveal-dur: 4.2s;
+  --reveal-dur: 1s;
   --reveal-ease: cubic-bezier(.25, .8, .25, 1);
 }
 
