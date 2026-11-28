@@ -56,6 +56,10 @@
     transform: none;
   }
 
+  .social-link[data-tip]::after {
+    transition: none;
+  }
+
   .js .case .flow b {
     opacity: 1;
   }

@@ -143,8 +143,98 @@ nav a.on {
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  gap: 16px 20px;
   margin-top: 26px;
+}
+
+.btn .btn-ic {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: -4px;
+  stroke: var(--ink);
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--mut);
+  text-decoration: none;
+  background: transparent;
+  transition: color .2s, border-color .2s, transform .2s, background .2s;
+}
+
+.social-link[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  z-index: 6;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(13, 26, 47, .96);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: .78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(6px);
+  transition: opacity .22s ease, transform .22s ease, visibility .22s;
+  pointer-events: none;
+}
+
+.social-link[data-tip]:hover::after,
+.social-link[data-tip]:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+}
+
+.social-img--workana {
+  width: 26px;
+  height: 26px;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform .2s;
+}
+
+.social-link--workana:hover .social-img--workana,
+.social-link--workana:focus-visible .social-img--workana {
+  transform: scale(1.06);
+}
+
+.social-link:hover {
+  color: var(--sig);
+  border-color: var(--sig);
+  transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+  color: var(--sig);
+  border-color: var(--sig);
 }
 
 footer {
