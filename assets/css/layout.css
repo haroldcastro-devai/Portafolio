@@ -175,9 +175,16 @@ nav a.on {
   transition: color .2s, border-color .2s, transform .2s, background .2s;
 }
 
-.social-link svg {
+.social-link svg,
+.social-link .social-brand {
   width: 22px;
   height: 22px;
+  display: block;
+}
+
+.social-link--workana:hover {
+  color: #8b7fd4;
+  border-color: #8b7fd4;
 }
 
 .social-link:hover {
